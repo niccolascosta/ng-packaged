@@ -1,13 +1,14 @@
 {
   "name": "@my/lib",
-  "version": "1.0.0-alpha.0",
-  "repository": "https://github.com/dherges/ng-packaged.git",
-  "author": "david <david@spektrakel.de>",
+  "version": "1.0.0",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "peerDependencies": {
     "@angular/core": "^5.0.0",
     "@angular/common": "^5.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.softplan.com.br/artifactory/api/npm/npm-local-unj/"
   },
   "ngPackage": {
     "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
@@ -15,7 +16,6 @@
     "workingDirectory": "../.ng_build",
     "lib": {
       "entryFile": "src/public_api.ts"
-    },
-    "dest": "../dist/my-lib"
+    }
   }
 }
